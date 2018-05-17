@@ -1,0 +1,17 @@
+<h1>Hello</h1>
+
+<h2>All Todos</h2>
+
+<ul>
+<% Todo.all.each do |todo| %>
+  <li><%= todo.todo %></li>
+<% end %>
+</ul>
+
+<h2>Todos with the in them</h2>
+
+<ul>
+  <% Todo.search("the").records.each do |todo| %>
+    <li><%= todo.todo %></li>
+  <% end %>
+</ul>
